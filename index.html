@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas Seguras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        input[type="password"], input[type="text"] {
+            width: 250px;
+            padding: 4px;
+            font-size: 14px;
+        }
+        .toggle-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 5px;
+            padding: 0;
+        }
+        .btn-group {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 4px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .checkbox-group {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .checkbox-item input {
+            pointer-events: none; 
+        }
+        .link-recuperar {
+            display: inline-block;
+            margin-top: 15px;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generador de Contraseñas Seguras</h1>
+
+    <label for="input-pass">Ingresa tu contraseña</label>
+    <div class="input-container">
+        <input type="password" id="input-pass" placeholder="Escribe o genera una contraseña">
+        <button class="toggle-btn" id="btn-toggle" title="Mostrar/Ocultar">👁️‍🗨️</button>
+    </div>
+
+    <div class="input-container">
+        <input type ="password" id="input-pass" placeholder="Confirmar contraseña">
+        <button id="btn-generar">Generar</button>
+    </div>
+
+    <div class="btn-group">
+        <button id="btn-guardar">Guardar</button>
+        <button id="btn-eliminar">Eliminar</button>
+    </div>
+
+    <div class="checkbox-group">
+        <div class="checkbox-item">
+            <input type="checkbox" id="req-mayus">
+            <span>(A-Z)</span>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="req-minus">
+            <span>(a-z)</span>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="req-num">
+            <span>(0-9)</span>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="req-esp">
+            <span>(@, #, $)</span>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="req-min8">
+            <span>(Min 8 Caracteres)</span>
+        </div>
+    </div>
+
+    <span class="link-recuperar" id="link-recuperar">Recuperar contraseña</span>
+    <script src="main.js"></script>
+</body>
+</html>
