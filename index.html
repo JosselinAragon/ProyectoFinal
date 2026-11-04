@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Contraseñas Seguras</title>
     <style>
-        body {
+
+   <!--ESTE CODIGO SE ENCARGA DE ORGANIZAR LA PAGINA AJUSTANDO MARGENES,TAMAÑOS Y POSICION DE ELEMENTOS-->
+        body
+         {
             font-family: Arial, sans-serif;
             margin: 30px;
         }
@@ -69,24 +72,29 @@
     </style>
 </head>
 <body>
+
+    <!--ESTE ES EL TITULO PRINCIPAL-->
     <h1>Generador de Contraseñas Seguras</h1>
 
+<!--ESTE EL CODIGO QUE PERMITE ESCRIBIR LA CONTRASEÑA-->
     <label for="input-pass">Ingresa tu contraseña</label>
     <div class="input-container">
         <input type="password" id="input-pass" placeholder="Escribe o genera una contraseña">
         <button class="toggle-btn" id="btn-toggle" title="Mostrar/Ocultar">👁️‍🗨️</button>
     </div>
-
+<!--ESTE BLOQUE PERMITE CONFIRMAR LA CONTRASEÑA-->
+ <!--Y REALIZAR LA GENERACION ALEATORIA-->
     <div class="input-container">
         <input type ="password" id="input-pass" placeholder="Confirmar contraseña">
         <button id="btn-generar">Generar</button>
     </div>
-
+<!--ESTOS BOTONES PERMITEN GUARDAR Y ELIMINAR LA CONTRASEÑA-->
     <div class="btn-group">
         <button id="btn-guardar">Guardar</button>
         <button id="btn-eliminar">Eliminar</button>
     </div>
 
+    <!--ESTE CODIGO MUESTRA LOS REQUISITOS QUE DEBE CUMPLIR LA CONTRASEÑA-->
     <div class="checkbox-group">
         <div class="checkbox-item">
             <input type="checkbox" id="req-mayus">
@@ -110,7 +118,9 @@
         </div>
     </div>
 
+    <!--ESTE ENLACE PERMITE ACCEDER A LA OPCION DE RECUPERAR CONTRASEÑA-->
     <span class="link-recuperar" id="link-recuperar">Recuperar contraseña</span>
+
     <script src="main.js"></script>
 </body>
 </html>
